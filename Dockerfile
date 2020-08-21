@@ -2,6 +2,8 @@ FROM ubuntu:latest
 
 USER root
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update &&\
 apt-get dist-upgrade -y &&\
 apt-get install build-essential git python3 python3-pip -y
