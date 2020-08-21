@@ -4,9 +4,11 @@ USER root
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+RUN dpkg --add-architecture i386
+
 RUN apt-get update &&\
 apt-get dist-upgrade -y &&\
-apt-get install build-essential git python3 python3-pip -y
+apt-get install build-essential git python3 python3-pip libc6:i386 libncurses5:i386 libstdc++6:i386 socat -y
 
 RUN cd /opt &&\
 git clone https://github.com/pwndbg/pwndbg && \
