@@ -22,7 +22,7 @@ jobs:
           # tag
           tags: latest
           # dockerfile
-          dockerfile: $GITHUB_WORKSPACE/Dockerfile
+          dockerfile: Dockerfile
       
     - name: Build and push glibc-2.23 docker image
       uses: docker/build-push-action@v1.1.0
@@ -36,7 +36,7 @@ jobs:
         # tag
         tags: glibc-2.23
         # dockerfile
-        dockerfile: $GITHUB_WORKSPACE/Dockerfile.glibc2.23
+        dockerfile: Dockerfile.glibc2.23
 
     - name: Build and push glibc-2.27 docker image
       uses: docker/build-push-action@v1.1.0
@@ -50,7 +50,7 @@ jobs:
         # tag
         tags: glibc-2.27
         # dockerfile
-        dockerfile: $GITHUB_WORKSPACE/Dockerfile.glibc2.27
+        dockerfile: Dockerfile.glibc2.27
 
     - name: Build and push glibc-2.30 docker image
       uses: docker/build-push-action@v1.1.0
@@ -64,7 +64,7 @@ jobs:
         # tag
         tags: glibc-2.30
         # dockerfile
-        dockerfile: $GITHUB_WORKSPACE/Dockerfile.glibc2.30
+        dockerfile: Dockerfile.glibc2.30
     
     - name: Build and push glibc-2.31 docker image
       uses: docker/build-push-action@v1.1.0
@@ -78,4 +78,4 @@ jobs:
         # tag
         tags: glibc-2.31
         # dockerfile
-        dockerfile: $GITHUB_WORKSPACE/Dockerfile.glibc2.31
+        dockerfile: Dockerfile.glibc2.31
