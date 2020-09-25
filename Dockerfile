@@ -3,6 +3,7 @@ FROM ubuntu:latest
 USER root
 
 ENV DEBIAN_FRONTEND=noninteractive
+ENV LC_CTYPE=C.UTF-8
 
 RUN dpkg --add-architecture i386
 
