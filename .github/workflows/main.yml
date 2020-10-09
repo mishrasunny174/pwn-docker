@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - master
-  if: github.event.pull_request.merged == true
+  pull_request:
+    if: github.event.pull_request.merged == true
     branches:
       - master
-    types: [closed]
   schedule:
     - cron: "* * * */3 *"
 
