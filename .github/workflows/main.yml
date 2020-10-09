@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build:
@@ -14,6 +17,7 @@ jobs:
 
     - name: Make docker files
       run: make
+
     - name: Build and push latest docker image
       uses: docker/build-push-action@v1.1.0
       with:
