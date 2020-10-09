@@ -1,7 +1,9 @@
-name: CI
+name: Main Workflow
 
 on:
   push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -10,6 +12,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Make docker files
+      run: make
     - name: Build and push latest docker image
       uses: docker/build-push-action@v1.1.0
       with:
@@ -22,7 +26,7 @@ jobs:
           # tag
           tags: latest
           # dockerfile
-          dockerfile: Dockerfile
+          dockerfile: Dockerfile.latest
       
     - name: Build and push glibc-2.23 docker image
       uses: docker/build-push-action@v1.1.0
