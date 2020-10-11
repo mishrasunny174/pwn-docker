@@ -1,7 +1,7 @@
 # pwn-docker
 
 ![Docker Pulls](https://img.shields.io/docker/pulls/mishrasunny174/pwn-docker)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mishrasunny174/pwn-docker/Main%20Workflow)](https://github.com/mishrasunny174/pwn-docker/actions?query=workflow%3AMain%20Workflow)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mishrasunny174/pwn-docker/Main%20Workflow)](https://github.com/mishrasunny174/pwn-docker/actions?query=workflow%3A%22Main%20Workflow%22)
 
 These images can be used to spin up an exploit development environment based on the libc version quickly to test and develop binary exploitation ctf challenges.
 
