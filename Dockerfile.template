@@ -21,7 +21,8 @@ socat \
 tmux \
 strace \
 ltrace \
-&& rm -rf /var/lib/apt/lists/*
+libcapstone-dev &&\
+rm -rf /var/lib/apt/lists/*
 
 RUN gem install one_gadget
 
