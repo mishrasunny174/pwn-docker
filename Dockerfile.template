@@ -36,4 +36,6 @@ cd pwndbg &&\
 RUN python3 -m pip install --upgrade pip && \
 python3 -m pip install git+https://github.com/Gallopsled/pwntools.git@dev 
 
+RUN pip3 install shellen
+
 CMD [ "tmux", "-u" ]
