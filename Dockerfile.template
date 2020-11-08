@@ -38,6 +38,4 @@ RUN python3 -m pip install --upgrade pip && \
 python3 -m pip install git+https://github.com/Gallopsled/pwntools.git@dev && \
 pip3 install shellen
 
-RUN echo "set -g mouse on" > ~/.tmux.conf
-
 CMD [ "tmux", "-u" ]
