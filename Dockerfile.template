@@ -25,7 +25,8 @@ ltrace \
 libcapstone-dev \
 seccomp \
 ruby-dev \
-radare2 &&\
+radare2 \
+xxd &&\
 rm -rf /var/lib/apt/lists/*
 
 RUN gem install one_gadget seccomp-tools
