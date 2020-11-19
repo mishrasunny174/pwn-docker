@@ -40,4 +40,6 @@ RUN python3 -m pip install --upgrade pip && \
 python3 -m pip install git+https://github.com/Gallopsled/pwntools.git@dev && \
 pip3 install shellen
 
+RUN find /usr/local -name ROPgadget -exec ln -s {} /usr/bin/ropgadget \;
+
 CMD [ "tmux", "-u" ]
