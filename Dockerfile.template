@@ -27,8 +27,7 @@ seccomp \
 ruby-dev \
 radare2 \
 xxd \
-vim \
-nc &&\
+vim &&\
 rm -rf /var/lib/apt/lists/*
 
 RUN gem install one_gadget seccomp-tools
