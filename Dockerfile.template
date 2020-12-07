@@ -36,10 +36,15 @@ git clone https://github.com/pwndbg/pwndbg && \
 cd pwndbg &&\
 ./setup.sh
 
+RUN cd /opt &&\
+git clone https://github.com/scwuaptx/Pwngdb.git
+
 RUN python3 -m pip install --upgrade pip && \
 python3 -m pip install git+https://github.com/Gallopsled/pwntools.git@dev && \
 pip3 install shellen formatstring
 
 RUN find /usr/local -name ROPgadget -exec ln -s {} /usr/bin/ropgadget \;
+
+COPY configs/ /root/
 
 CMD [ "tmux", "-u" ]
