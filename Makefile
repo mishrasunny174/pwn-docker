@@ -7,6 +7,7 @@ glibc2.23:
 	sed 's/latest/16.04/g' Dockerfile.template > Dockerfile.$@
 	sed -i 's/seccomp-tools//g' Dockerfile.$@
 	sed -i 's/xxd//g' Dockerfile.$@
+	sed -o 's/ncat/nc/g' Dockerfile.$@
 
 glibc2.27:
 	sed 's/latest/18.04/g' Dockerfile.template > Dockerfile.$@
