@@ -33,7 +33,7 @@ rm -rf /var/lib/apt/lists/*
 RUN gem install one_gadget seccomp-tools
 
 RUN cd /opt &&\
-git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/pwndbg/pwndbg && \
+git clone --depth 1 --recurse-submodules https://github.com/pwndbg/pwndbg && \
 cd pwndbg &&\
 ./setup.sh
 
@@ -48,6 +48,6 @@ RUN find /usr/local -name ROPgadget -exec ln -s {} /usr/bin/ropgadget \;
 
 COPY configs/ /root/
 
-RUN git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/aquynh/capstone /opt/capstone && cd /opt/capstone && ./make.sh && ./make.sh install
+RUN git clone --depth 1 --recurse-submodules https://github.com/aquynh/capstone /opt/capstone && cd /opt/capstone && ./make.sh && ./make.sh install
 
 CMD [ "tmux", "-u" ]
