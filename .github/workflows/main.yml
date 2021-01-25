@@ -13,6 +13,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+    
+    - name: make docker images
+      run: make
 
     - name: Build and push latest docker image
       uses: docker/build-push-action@v1.1.0
