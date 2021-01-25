@@ -38,7 +38,7 @@ cd pwndbg &&\
 ./setup.sh
 
 RUN cd /opt &&\
-git clone -b https://github.com/scwuaptx/Pwngdb.git
+git clone https://github.com/scwuaptx/Pwngdb.git
 
 RUN python3 -m pip install --upgrade pip && \
 python3 -m pip install git+https://github.com/Gallopsled/pwntools.git@dev && \
