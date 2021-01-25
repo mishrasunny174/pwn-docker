@@ -3,12 +3,6 @@ all: glibc2.23 glibc2.27 glibc2.31 latest
 latest:
 	cp Dockerfile.template Dockerfile.latest
 
-glibc2.23:
-	sed 's/latest/16.04/g' Dockerfile.template > Dockerfile.$@
-	sed -i 's/seccomp-tools//g' Dockerfile.$@
-	sed -i 's/xxd//g' Dockerfile.$@
-	sed -i 's/RUN gem install one_gadget//g' Dockerfile.$@
-
 glibc2.27:
 	sed 's/latest/18.04/g' Dockerfile.template > Dockerfile.$@
 
@@ -18,5 +12,5 @@ glibc2.31:
 clean:
 	rm Dockerfile.glibc* Dockerfile.latest
 
-test: glibc2.23 glibc2.27 glibc2.30 latest
+test: glibc2.27 glibc2.30 latest
 	for tag in $^; do docker build . -f Dockerfile.$$tag -t pwn-docker:$$tag; done
