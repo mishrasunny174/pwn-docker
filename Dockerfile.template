@@ -27,7 +27,7 @@ seccomp \
 ruby-dev \
 radare2 \
 xxd \
-ncat  \
+netcat  \
 iproute2 \
 vim &&\
 rm -rf /var/lib/apt/lists/*
