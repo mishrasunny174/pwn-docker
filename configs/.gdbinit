@@ -1,1 +1,1 @@
-source  /opt/Pwngdb/pwngdb.py
+source  /opt/pwndbg/gdbinit.py
