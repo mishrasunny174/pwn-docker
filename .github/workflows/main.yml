@@ -58,3 +58,17 @@ jobs:
         tags: glibc-2.31
         # dockerfile
         dockerfile: Dockerfile.glibc2.31
+  
+  - name: Build and push glibc-2.32 docker image
+      uses: docker/build-push-action@v1.1.0
+      with:
+        # Username used to log in to a Docker registry. If not set then no login will occur
+        username: ${{ secrets.DOCKER_USERNAME }}
+        # Password or personal access token used to log in to a Docker registry. If not set then no login will occur
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        # repository to push image to
+        repository: mishrasunny174/pwn-docker
+        # tag
+        tags: glibc-2.32
+        # dockerfile
+        dockerfile: Dockerfile.glibc2.32

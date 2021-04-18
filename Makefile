@@ -9,6 +9,9 @@ glibc2.27:
 glibc2.31:
 	sed 's/latest/20.04/g' Dockerfile.template > Dockerfile.$@
 
+glibc2.32:
+	sed 's/latest/20.10/g' Dockerfile.template > Dockerfile.$@
+
 clean:
 	rm Dockerfile.glibc* Dockerfile.latest
 
