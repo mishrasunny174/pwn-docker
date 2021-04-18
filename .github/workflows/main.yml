@@ -59,7 +59,7 @@ jobs:
         # dockerfile
         dockerfile: Dockerfile.glibc2.31
   
-  - name: Build and push glibc-2.32 docker image
+    - name: Build and push glibc-2.32 docker image
       uses: docker/build-push-action@v1.1.0
       with:
         # Username used to log in to a Docker registry. If not set then no login will occur
