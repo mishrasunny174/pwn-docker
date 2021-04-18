@@ -1,4 +1,4 @@
-all: glibc2.27 glibc2.31 latest
+all: glibc2.27 glibc2.31 glibc2.32 latest
 
 latest:
 	cp Dockerfile.template Dockerfile.latest
