@@ -1,7 +1,6 @@
 # pwn-docker
 
-![Docker Pulls](https://img.shields.io/docker/pulls/mishrasunny174/pwn-docker)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mishrasunny174/pwn-docker/Main%20Workflow)](https://github.com/mishrasunny174/pwn-docker/actions?query=workflow%3A%22Main%20Workflow%22)
+![Docker Pulls](https://img.shields.io/docker/pulls/mishrasunny174/pwn-docker) [![Build and Push to dockerhub](https://github.com/mishrasunny174/pwn-docker/actions/workflows/dockerhub.yml/badge.svg)](https://github.com/mishrasunny174/pwn-docker/actions/workflows/dockerhub.yml) [![Build and push to github package repository](https://github.com/mishrasunny174/pwn-docker/actions/workflows/build.yml/badge.svg)](https://github.com/mishrasunny174/pwn-docker/actions/workflows/build.yml)
 
 These images can be used to spin up an exploit development environment to test and develop binary exploitation ctf challenges.
 
