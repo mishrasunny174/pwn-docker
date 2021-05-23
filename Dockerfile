@@ -4,6 +4,11 @@ USER root
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV LC_CTYPE=C.UTF-8
+ENV TZ=Asia/Kolkata
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+LABEL maintainer="mishrasunny174@gmail.com"
 
 RUN dpkg --add-architecture i386
 
