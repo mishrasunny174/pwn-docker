@@ -23,13 +23,16 @@ tmux \
 strace \
 ltrace \
 libcapstone-dev \
+libcapstone-dev:i386 \
 seccomp \
 ruby-dev \
 radare2 \
 xxd \
 netcat  \
 iproute2 \
-vim &&\
+vim \
+elfutils \
+binutils-common && \
 rm -rf /var/lib/apt/lists/*
 
 RUN gem install one_gadget seccomp-tools
@@ -40,13 +43,12 @@ cd pwndbg &&\
 ./setup.sh
 
 RUN python3 -m pip install --upgrade pip && \
-python3 -m pip install git+https://github.com/Gallopsled/pwntools.git@dev && \
-pip3 install shellen formatstring
+python3 -m pip install shellen ropgadget && \
+python3 -m pip install git+https://github.com/Gallopsled/pwntools.git@dev
 
-RUN find /usr/local -name ROPgadget -exec ln -s {} /usr/bin/ropgadget \;
 
 COPY configs/ /root/
 
-RUN git clone --depth 1 --recurse-submodules https://github.com/aquynh/capstone /opt/capstone && cd /opt/capstone && ./make.sh && ./make.sh install
+RUN git clone https://github.com/mishrasunny174/libc-debug-build.git /opt/libc-debug-build
 
-CMD [ "tmux", "-u" ]
+CMD [ "tmux", "-u", "new", "-s" ,"pwn"]
