@@ -23,7 +23,6 @@ tmux \
 strace \
 ltrace \
 libcapstone-dev \
-libcapstone-dev:i386 \
 seccomp \
 ruby-dev \
 radare2 \
