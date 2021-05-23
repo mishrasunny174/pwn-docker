@@ -31,6 +31,7 @@ netcat  \
 iproute2 \
 vim \
 elfutils \
+sudo \
 binutils-common && \
 rm -rf /var/lib/apt/lists/*
 
