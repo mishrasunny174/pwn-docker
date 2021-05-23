@@ -56,4 +56,10 @@ COPY configs/ /root/
 
 RUN git clone https://github.com/mishrasunny174/libc-debug-build.git /opt/libc-debug-build
 
+# install starship
+RUN sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+RUN echo 'eval "$(starship init bash)"' >> /root/.bashrc
+RUN mkdir -p /root/.config/
+RUN mv /root/starship.toml /root/.config/
+
 CMD [ "tmux", "-u", "new", "-s" ,"pwn"]
