@@ -37,7 +37,8 @@ iproute2 \
 vim \
 elfutils \
 sudo \
-binutils-common && \
+binutils-common \
+patchelf && \
 rm -rf /var/lib/apt/lists/*
 
 RUN gem install one_gadget seccomp-tools
