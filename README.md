@@ -9,3 +9,15 @@ These images can be used to spin up an exploit development environment to test a
 ```bash
 docker run --rm -v $PWD:/hack --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -it mishrasunny174/pwn-docker:latest
 ```
+
+## Preinstalled Glibc Versions
+
+### amd64
+
+- 2.23-0ubuntu5
+- 2.27-3ubuntu1
+- 2.29-0ubuntu2
+
+### i386
+
+- 2.23-0ubuntu5
