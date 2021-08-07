@@ -51,9 +51,8 @@ cd pwndbg &&\
 RUN python3 -m pip install --upgrade pip && \
 python3 -m pip install shellen ropgadget pwntools ropper
 
-
 COPY configs/ /root/
 
 RUN git clone https://github.com/mishrasunny174/libc-debug-build.git /opt/libc-debug-build
 
-CMD [ "tmux", "-u", "new", "-s" ,"pwn"]
+CMD ["tmux", "-u", "new", "-s" ,"pwn"]
