@@ -30,7 +30,6 @@ ltrace \
 libcapstone-dev \
 seccomp \
 ruby-dev \
-radare2 \
 xxd \
 netcat  \
 iproute2 \
