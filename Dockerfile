@@ -49,7 +49,9 @@ cd pwndbg &&\
 ./setup.sh
 
 RUN python3 -m pip install --upgrade pip && \
-python3 -m pip install shellen ropgadget pwntools ropper
+python3 -m pip install shellen ropgadget ropper
+
+RUN python3 -m pip install git+https://github.com/Gallopsled/pwntools.git@dev
 
 COPY configs/ /root/
 
