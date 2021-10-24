@@ -20,6 +20,7 @@ docker run --rm -v $PWD:/hack --cap-add=SYS_PTRACE --security-opt seccomp=unconf
 - 2.29-0ubuntu2
 - 2.31-0ubuntu9.2
 - 2.32-0ubuntu3
+- 2.33-0ubuntu5
 
 ### i386
 
