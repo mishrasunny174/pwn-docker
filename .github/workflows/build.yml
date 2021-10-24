@@ -16,7 +16,7 @@ jobs:
     - name: Login to docker
       uses: docker/login-action@v1
       with:
-        registry: docker.pkg.github.com
+        registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
     
@@ -26,4 +26,4 @@ jobs:
         context: .
         push: true
         tags: |
-          docker.pkg.github.com/${{ github.repository }}/pwn-docker:latest
+          ghcr.io/${{ github.repository }}/pwn-docker:latest
